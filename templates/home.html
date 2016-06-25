@@ -1,0 +1,33 @@
+<!doctype html>
+
+    <head>
+    </head>
+    
+    <body>
+
+     
+     <script src="/static/addInput.js" language="Javascript" type="text/javascript"></script>
+
+                <button type="submit" name="submit" value="success" class="btn btn-default">Submit</button>
+</form>
+        <form name="startpage" method="POST" action="">
+            <div id="dynamicInput">
+            <select name = "myInputs[]" id = "myInputs[]">
+                <option value="Int">Int</option>
+                <option value="Double">Double</option>
+                <option value="String">String</option>
+                <option value="Date">Date</option>
+                <option value="Char">Char</option>
+            </select>
+            <input type="button" value="Add another text input" onClick="addInput('dynamicInput');">
+
+            <br /> <br />
+        <input type="number" name="num_rows" >
+                <button type="submit" name="submit" value="success" class="btn btn-default">Submit</button>
+        </form>
+
+    </body>
+
+
+
+</html>
