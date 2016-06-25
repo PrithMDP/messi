@@ -17,14 +17,14 @@ def int_generator(num_rows):
 @app.route('/', methods = ['GET','POST'])
 def file_setup():
     if request.method == "POST":
-        print "HEREEEEE"
-        method_1 = request.form.getlist("myInputs[]")
         num_rows = request.form["num_rows"] #number of rows
+        types = []
         print str(request.form.getlist("myInputs[]"))
-        print "JIHIHI"
-        if method_1 == "Int":
-            print request.form["myInputs[]"]
-            return "HI"
+        print str(request.form.getlist("num_inputs"))
+        types = request.form.getlist("myInputs[]")
+        #print types
+        #if method_1 == "Int":
+            #print request.form["myInputs[]"]
             #int_generator(num_rows)
             #return redirect (url_for("file_out"))
 

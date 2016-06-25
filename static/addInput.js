@@ -6,8 +6,8 @@ function addInput(divName){
      }
      else {
           var newdiv = document.createElement('div');
-          newdiv.innerHTML = "Column " + (counter + 1) +  "<br><select name='myInputs[]'> <option value = \"Int\"> Int </option><option value=\"Double\">Double</option><option value=\"String\">String</option><option value=\"Date\">Date</option><option value=\"Char\">Char</option> </select>"
-          document.getElementById("dynamicInput").appendChild(newdiv);
+          newdiv.innerHTML = "Column " + (counter + 1) +  "<br><select name='myInputs[]'> <option value = \"Int\"> Int </option><option value=\"Double\">Double</option><option value=\"String\">String</option><option value=\"Date\">Date</option><option value=\"Char\">Char</option> </select><input type =\"number\" name=\"num_inputs\" >"
+          document.getElementById(divName).appendChild(newdiv);
           counter++;
      }
 }
