@@ -100,15 +100,14 @@ def file_out():
     # need to do is create a response out of the CSV string
     # 2D list
     elements = []
-    elements.append([])
-    elements.append([])
-
+    for x in range(session["col_num"]):
+        elements.append([])
 
     print "in last route"
-    trylist = []
     #ession_print(session["col_num"])
     try:
-        print ("HIHIH",gSessionData)
+        #print ("HIHIH",gSessionData)
+        pass
     except:
         pass
     
@@ -117,17 +116,22 @@ def file_out():
     # print trylist[0]
     
     print gSessionData
+    for x in range(session["col_num"]):
+        elements[x] = gSessionData[x]
 
-    elements[0] = gSessionData[0]
-    elements[1] = gSessionData[1]
-    print("NOW PRINITNG FINAL")
-    print elements[0]
-    print elements[1]
+    # elements[0] = gSessionData[0]
+    # elements[1] = gSessionData[1]
+    # print("NOW PRINITNG FINAL")
+    # print elements[0]
+    # print elements[1]
+
+    for val in elements:
+        print val
     
-    csv = ""
-    for key in elements[0]:
-        csv += key +" "
-    print("CSV IS ", csv)
+    # csv = ""
+    # for key in elements[0]:
+    #     csv += key +" "
+    # print("CSV IS ", csv)
 
     return "HI"
     #response = make_response(csv)
